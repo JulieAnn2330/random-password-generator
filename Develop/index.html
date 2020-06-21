@@ -1,3 +1,12 @@
+   <!-- 1.  Ask user: password length 8-128 - user response -->
+    <!-- Can I do all of these (2-5) with radio buttons or checkboxes? -->
+    <!-- 2. Ask user: numbers 0-9 - T/F  -->
+    <!-- 3. Ask user: uppercase letters - T/F -->
+    <!-- 4. Ask user: lowercase letters - T/F -->
+    <!-- 5. Ask user: special characters - T/F -->
+    <!-- 6. Generate random password using criteria selected -->
+    <!-- 7. New password every time button is hit -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,15 +17,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
+     <div class="wrapper">
       <header>
+        <!-- top of page text -->
         <h1>Password Generator</h1>
       </header>
+      <!-- box that surrounds the password box -->
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
+          <!-- box that password appears in, aria-label is for screenreaders -->
           <textarea
             readonly
             id="password"
@@ -24,11 +36,17 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+        <!-- button to generate password -->
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
+          <!-- Copy password to clipboard -->
+          <button id="copy" class="btn">Copy to Clipboard</button>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+ 
+    <script src="script.js">
+
+    </script>
   </body>
 </html>
