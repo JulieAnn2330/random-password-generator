@@ -35,11 +35,3 @@ var UserChar=prompt("Include special characters Y or N?");
 
   }
 
-<!-- button to generate password -->
-<div class="card-footer">
-  <button id="generate" class="btn">Generate Password</button>
-  <!-- Copy password to clipboard -->
-  <button id="copy" class="btn">Copy to Clipboard</button>
-</div>
-</div>
-</div>
