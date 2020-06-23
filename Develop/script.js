@@ -38,40 +38,33 @@ else {
   alert("You have not selected any valid criteria for a password. Hit the refresh button and start over");
 }
 
+// Assignment Code
+
+var generateBtn = document.querySelector("#generate");
 
 var uCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lCase="abcedfghijklmnopqrstuvwxyz";
-var nums="0123457890"
+var nums="0123457890";
 var characters="!@#$%^&*~_-+=<>?";
 var password=""
 
-
-
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
-
+var values = uCase + lCase + nums + characters;
 
 // Write password to the #password input
 
-if((confirmUcase && confirmLcase && confirmNums && confirmChars)) {
-
-  var values= (uCase + lCase + nums + characters)
-  
-  }
-  
  function writePassword() {
+ var password = generatePassword() 
 
-  for(var i = 0; i <= userLength; i++) {
+  for(var i = 0; i <= userLength; i++);
     password = password+values.charAt(Math.floor(Math.random()*Math.floor(values.length)));
-
-  var password = generatePassword();
+  }
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
- }
+ 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
- }
+ 
