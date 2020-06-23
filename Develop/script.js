@@ -1,15 +1,34 @@
 // Password length
-var userLength=prompt("Choose the length of your password, between 8 and 128 characters.");
+
+function passwordLength () {
   
-if(userLength) {
-    alert("Your password will be " + userLength + " characters long.")
+  var userLength = prompt("Choose the length of your password, between 8 and 128 characters.");
+  
+  if ((userLength < 8) || (userLength > 128)) { 
+        alert("Please enter a number between 8 and 128.");
+        passwordLength();
   }
+  
+  else { 
+    alert("Your password will be " + userLength + " characters long.")
+  } 
+  }  
+  
+  passwordLength();
+
+  var uCase=["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var lCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var characters = ["!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
+ 
+  var passwordArray = [[uCase], [lCase], [nums], [characters]];
 
 // Use uppercase letters?
 var confirmUcase = confirm("Include uppercase letters?");
 
 if (confirmUcase) {
   alert("You want to include uppercase letters.");
+  passwordArray.push[uCase];
 } 
 
 // Use lowercase letters>
@@ -17,6 +36,7 @@ var confirmLcase = confirm("Include lowercase letters?");
 
 if (confirmLcase) {
   alert("You want to include lowercase letters.");
+  passwordArray.push[lCase];
 }
 
 // Use numbers?
@@ -24,13 +44,15 @@ var confirmNums = confirm("Include numbers?");
 
 if (confirmNums) {
   alert("You want to include numbers.");
+  passwordArray.push[nums];
 }
 
 // Use special characters?
-var confirmChars = confirm("Include special characters?");
+var confirmCharacters = confirm("Include special characters?");
 
-if (confirmChars) {
+if (confirmCharacters) {
   alert("You want to include special characters.");
+  passwordArray.push[characters];
 }
 
 // If no valid criteria is selected
@@ -42,29 +64,28 @@ else {
 
 var generateBtn = document.querySelector("#generate");
 
-var uCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lCase="abcedfghijklmnopqrstuvwxyz";
-var nums="0123457890";
-var characters="!@#$%^&*~_-+=<>?";
-var password=""
-
-var values = uCase + lCase + nums + characters;
-
 // Write password to the #password input
 
- function writePassword() {
- var password = generatePassword() 
+ var password = ""
 
-  for(var i = 0; i <= userLength; i++);
-    password = password+values.charAt(Math.floor(Math.random()*Math.floor(values.length)));
-  }
+ function writePassword() {
+
+//  var password = generatePassword() 
+
+    for(i = 0; i < passwordArray.length; i++); {
+
+      var randIndex = (Math.floor(Math.random()*passwordArray.length));
+      console.log(passwordArray[randIndex]);
+
+ }
+  
+ }
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
- 
-
-// Add event listener to generate button
+ // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
  
