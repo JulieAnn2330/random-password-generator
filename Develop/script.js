@@ -62,36 +62,31 @@ var characters = ["!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<
 
 var passwordArray = [uCase, lCase, nums, characters];
 
+
+
+
+
 // Write password to the #password input
+
+ var password = ""
 
  function writePassword() {
 
-  for(i = 0; i < passwordArray.length; i++); {
+  // var password = generatePassword(arr) {
 
-    var userLength = userLength;
-    var randIndex = userLength(Math.floor(Math.random()*passwordArray.length));
+    for (var i = 0; i < passwordArray.length; i++); {
 
-    writePassword();
-
-   
-    }
+      var randIndex = (Math.floor(Math.random()*passwordArray.length));
+      console.log(passwordArray[randIndex]);
 
   }
-
-  // var password = generatePassword() 
-  
+    
+  }
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
-  
+    
 
  // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-function myFunction() {
-  var copyText = document.getElementById("myInput");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999)
-  document.execCommand("copy");
-  alert("Copied the text: " + copyText.value);
-}
