@@ -108,6 +108,11 @@ if (confirmUcase === false && confirmLcase === false && confirmNums === false &&
     document.writeln(removedItem);
 
     getRandomIndex();
+    
+}
+
+function passwordParameters() {
+  document.getElementById("#password").value = "Fifth Avenue, New York City";
 
   }
 }
