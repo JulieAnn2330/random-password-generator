@@ -24,8 +24,17 @@ function passwordParameters () {
 
   var resultArray = [];
   
-  { var userLength = prompt("Choose the length of your password, between 8 and 128 characters.");
+  // Confirm length of password
+  var userLength = prompt("Choose the length of your password, between 8 and 128 characters.");
   console.log(userLength);
+  // Use uppercase letters?
+  var confirmUcase = confirm("Include uppercase letters?");
+  // Use lowercase letters>
+  var confirmLcase = confirm("Include lowercase letters?");
+  // Use numbers?
+  var confirmNums = confirm("Include numbers?");
+  // Use special characters?
+  var confirmCharacters = confirm("Include special characters?");
   
   if ((userLength < 8) || (userLength > 128 || (userLength === 0))) { 
         alert("Please enter a number between 8 and 128.");
@@ -35,9 +44,6 @@ function passwordParameters () {
     alert("Your password will be " + userLength + " characters long.");
     } 
    
-// Use uppercase letters?
-var confirmUcase = confirm("Include uppercase letters?");
-
 if (confirmUcase) {
   alert("You want to include uppercase letters.");
   Array.prototype.push.apply(passwordArray, uCase);
@@ -48,9 +54,6 @@ else if (confirmUcase === false) {
   alert("Yo do not want to include uppercase letters.");
   console.log(confirmUcase);
 }
-
-// Use lowercase letters>
-var confirmLcase = confirm("Include lowercase letters?");
 
 if (confirmLcase) {
   alert("You want to include lowercase letters.");
@@ -63,9 +66,6 @@ else if (confirmLcase === false) {
   console.log(confirmLcase);
 }
 
-// Use numbers?
-var confirmNums = confirm("Include numbers?");
-
 if (confirmNums) {
   alert("You want to include numbers.");
   Array.prototype.push.apply(passwordArray, nums);
@@ -76,9 +76,6 @@ else if (confirmNums === false) {
   alert("Yo do not want to include numbers.");
   console.log(confirmNums);
 }
-
-// Use special characters?
-var confirmCharacters = confirm("Include special characters?");
 
 if (confirmCharacters) {
   alert("You want to include special characters.");
@@ -100,7 +97,7 @@ if (confirmUcase === false && confirmLcase === false && confirmNums === false &&
 
 }
 
- function getRandomIndex(passwordArray) {
+ function getRandomIndex(_passwordArray) {
     return Math.floor(Math.random() * userLength);
   }
   for ( var i = 0; i < userLength; i++ ) {
@@ -117,6 +114,5 @@ function passwordParameters() {
   }
 }
 
-}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword)
