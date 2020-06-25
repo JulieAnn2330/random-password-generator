@@ -20,7 +20,7 @@ var confirmUcase = confirm("Include uppercase letters?");
 
 if (confirmUcase) {
   alert("You want to include uppercase letters.");
-  passwordArray.push[uCase];
+  password.push[uCase];
 } 
 
 // Use lowercase letters>
@@ -28,7 +28,7 @@ var confirmLcase = confirm("Include lowercase letters?");
 
 if (confirmLcase) {
   alert("You want to include lowercase letters.");
-  passwordArray.push[lCase];
+  password.push[lCase];
 }
 
 // Use numbers?
@@ -36,7 +36,7 @@ var confirmNums = confirm("Include numbers?");
 
 if (confirmNums) {
   alert("You want to include numbers.");
-  passwordArray.push[nums];
+  password.push[nums];
 }
 
 // Use special characters?
@@ -44,14 +44,16 @@ var confirmCharacters = confirm("Include special characters?");
 
 if (confirmCharacters) {
   alert("You want to include special characters.");
-  passwordArray.push[characters];
+  password.push[characters];
 }
 
 // If no valid criteria is selected
-else {
+else if (confirmUcase === false && confirmLcase === false && confirmNums === false && confirmCharacters === false) {
+  
   alert("You have not selected any valid criteria for a password. Hit the refresh button and start over");
 
   passwordParameters();
+
 }
 }
 
@@ -60,33 +62,28 @@ var lCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 var nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var characters = ["!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
 
-var passwordArray = [uCase, lCase, nums, characters];
-
-
-
-
+var password = [uCase, lCase, nums, characters];
 
 // Write password to the #password input
 
- var password = ""
-
  function writePassword() {
 
-  // var password = generatePassword(arr) {
+   var password = function generatePassword() {
+     
+      for (var i = 0; i < passwordArray.length; i++); {
 
-    for (var i = 0; i < passwordArray.length; i++); {
+        var randIndex = (Math.floor(Math.random()*password.length - 1));
 
-      var randIndex = (Math.floor(Math.random()*passwordArray.length));
-      console.log(passwordArray[randIndex]);
-
-  }
+        return password;
     
-  }
+       }   
+
+      } 
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
-    
-
  // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+  }
