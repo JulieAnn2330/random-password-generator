@@ -71,14 +71,14 @@ else {
 
 }
 
-function generatePassword(len, charSet) {
-  charSet = [passwordArray];
-  var randomString = '';
-  for (var i = 0; i < len; i++) {
-      var randomPoz = Math.floor(Math.random() * charSet.length);
-      randomString += charSet.substring(randomPoz,randomPoz+1);
+var getMeRandomElements = function(passwordArray, userLength) {
+  var result = [];
+  for (var i = 0; i < userLength; i++) {
+  var index = Math.floor(Math.random() * passwordArray.length);
+      result.push(passwordArray[index]);
+      passwordArray.splice(index, 1);
   }
-  return randomString;
+  return result;
 }
 
 

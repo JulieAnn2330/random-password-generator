@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword(); 
+  // var password = generatePassword(); 
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -11,16 +11,15 @@ function writePassword() {
 
 // Password length
 
-function passwordParameters () {
+function passwordParameters() {
 
-  var uCase=["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var uCase = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var lCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var characters = ["!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
-  
-  var userLength = 0;
-
   var passwordArray = [];
+  console.log(passwordArray)
+  var userLength = 0;
 
   var resultArray = [];
   
@@ -44,9 +43,9 @@ function passwordParameters () {
     alert("Your password will be " + userLength + " characters long.");
     } 
    
-if (confirmUcase) {
+if (confirmUcase === true) {
   alert("You want to include uppercase letters.");
-  Array.prototype.push.apply(passwordArray, uCase);
+  passwordArray.push(uCase);
   console.log(confirmUcase);
 } 
 
@@ -55,9 +54,9 @@ else if (confirmUcase === false) {
   console.log(confirmUcase);
 }
 
-if (confirmLcase) {
+if (confirmLcase === true) {
   alert("You want to include lowercase letters.");
-  Array.prototype.push.apply(passwordArray, lCase);
+  passwordArray.push(lCase);
   console.log(confirmLcase);
 }
 
@@ -66,9 +65,9 @@ else if (confirmLcase === false) {
   console.log(confirmLcase);
 }
 
-if (confirmNums) {
+if (confirmNums === true) {
   alert("You want to include numbers.");
-  Array.prototype.push.apply(passwordArray, nums);
+  passwordArray.push(nums);
   console.log(confirmNums);
 }
 
@@ -77,9 +76,9 @@ else if (confirmNums === false) {
   console.log(confirmNums);
 }
 
-if (confirmCharacters) {
+if (confirmCharacters === true) {
   alert("You want to include special characters.");
-  Array.prototype.push.apply(passwordArray, characters);
+  passwordArray.push(characters);
   console.log(confirmCharacters);
 }
 
@@ -97,22 +96,41 @@ if (confirmUcase === false && confirmLcase === false && confirmNums === false &&
 
 }
 
- function getRandomIndex(_passwordArray) {
+{
+function randomArrayShuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+var passwordArray = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
+randomArrayShuffle(passwordArray); 
+console.log(passwordArray);
+}
+
+
+function getRandomIndex(passwordArray) {
     return Math.floor(Math.random() * userLength);
   }
   for ( var i = 0; i < userLength; i++ ) {
-    var removedItem = passwordArray.splice(getRandomIndex(passwordArray), 1);
+   var removedItem = passwordArray.splice(getRandomIndex(passwordArray), 1);
     document.writeln(removedItem);
 
     getRandomIndex();
     
 }
 
-function passwordParameters() {
-  document.getElementById("#password").value = "Fifth Avenue, New York City";
+// function passwordParameters() {
+  // document.getElementById("#password").value = "Fifth Avenue, New York City";
 
-  }
-}
+  // }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword)
+}
