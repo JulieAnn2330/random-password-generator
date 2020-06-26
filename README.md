@@ -1,5 +1,15 @@
+Deployed program: https://julieann2330.github.io/password-generator/
+
 # password-generator
 Java Script Password Generator
+
+This is a homework assignment that I created for the University of Kansas Coding BootCamp. 
+
+Based on user input including length of password, use of uppercase letters, lowercase letters, numbers and special characters, the program will automatically generate a user password that meets their criteria. 
+
+I utilized several coding websites for help, including StackOverflow and w3schools.com I also watched YouTube tutorials and got assistance from fellow student Aurora Brune. 
+
+The full details of the project are listed below.
 
 # 03 JavaScript: Password Generator
 
