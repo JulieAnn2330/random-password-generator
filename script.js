@@ -33,7 +33,7 @@ function passwordParameters() {
 
     else {
         confirm("Your password will be " + userLength + " characters long.");
-    }
+        }
     console.log(userLength);
     // Use uppercase letters?
     var confirmUcase = confirm("Include uppercase letters?");
@@ -47,7 +47,7 @@ function passwordParameters() {
     // User selections
     if (confirmUcase === true) {
         alert("You want to include uppercase letters.");
-        passwordArray.push(uCase);
+        Array.prototype.push.apply(passwordArray, uCase);
         console.log(confirmUcase);
     }
 
@@ -58,7 +58,7 @@ function passwordParameters() {
 
     if (confirmLcase === true) {
         alert("You want to include lowercase letters.");
-        passwordArray.push(lCase);
+        Array.prototype.push.apply(passwordArray, lCase);
         console.log(confirmLcase);
     }
 
@@ -69,7 +69,7 @@ function passwordParameters() {
 
     if (confirmNums === true) {
         alert("You want to include numbers.");
-        passwordArray.push(nums);
+        Array.prototype.push.apply(passwordArray, nums);
         console.log(confirmNums);
     }
 
@@ -80,7 +80,7 @@ function passwordParameters() {
 
     if (confirmCharacters === true) {
         alert("You want to include special characters.");
-        passwordArray.push(characters);
+        Array.prototype.push.apply(passwordArray, characters);
         console.log(confirmCharacters);
     }
 
