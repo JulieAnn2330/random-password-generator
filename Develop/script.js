@@ -30,13 +30,13 @@ function generatePassword() {
   var userLength = confirm("Please choose from the following password criteria.");
   if (userLength) {
     passwordLength = prompt("Please choose a password between 8 and 128 characters.");
-    console.log(passwordLength);
+   
   if ((passwordLength < 8) || (passwordLength > 128)) {
     prompt("Please enter a number between 8 and 128.");
-   }
-
+   
    } else {
     confirm("Your password will be " + passwordLength + " characters long.");
+    console.log(passwordLength);
   return;
   }
  
@@ -128,6 +128,5 @@ function generatePassword() {
     getRandomIndex();
 
   }
-
- 
+  }
 }

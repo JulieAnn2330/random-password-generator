@@ -1,37 +1,38 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
 // Write password to the #password input
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
-
     passwordText.value = password;
 }
-
-// Password length
-
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword)
+// Function to take in user input.
 function passwordParameters() {
-
+// Variables for user to choose from for password criteria
     var uCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var lCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     var characters = ["!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
-    var passwordArray = [];
-    console.log(passwordArray)
-
+    // Variable for length of password that user chooses,
     var userLength = 0;
-
-    var resultArray = [];
-
-    // Confirm length of password
-    var userLength = prompt("Choose the length of your password, between 8 and 128 characters.");
-    if ((userLength < 8) || (userLength > 128)) {
-        alert("Please enter a number between 8 and 128.");
+    // Collection point of arrays that user chooses to include in password.
+    var passwordArray = [];
+    console.log(passwordArray);
+    // Collection of random samples that will ultimately create password.
+    var resultsArray = [];
+        // Confirm length of password
+        var userIntro = confirm("Do you want to set up your password?");
+        if (userIntro) {
+            userLength = prompt("Choose the length of your password, between 8 and 128 characters.");
+        console.log(userLength);
+        if ((userLength < 8) || (userLength > 128)) {
+        prompt("Please enter a number between 8 and 128.");
     }
 
     else {
-        alert("Your password will be " + userLength + " characters long.");
+        confirm("Your password will be " + userLength + " characters long.");
     }
     console.log(userLength);
     // Use uppercase letters?
@@ -97,32 +98,14 @@ function passwordParameters() {
 
     }
 
-    function randomArrayShuffle(array) {
-        var currentIndex = array.length, temporaryValue, randomIndex;
-        while (0 !== currentIndex) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex -= 1;
-            temporaryValue = array[currentIndex];
-            array[currentIndex] = array[randomIndex];
-            array[randomIndex] = temporaryValue;
-        }
-        return array;
-    }
-    var passwordArray = [uCase = "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
-    randomArrayShuffle(passwordArray);
-    console.log(passwordArray);
-}
-
-function getRandomIndex(passwordArray) {
-    return Math.floor(Math.random() * userLength);
+   function getRandomIndex(passwordArray) {
+    return Math.floor(Math.random() * userLength.length);
 }
 for (var i = 0; i < userLength; i++) {
     var removedItem = passwordArray.splice(getRandomIndex(passwordArray), 1);
     document.writeln(removedItem);
 
     getRandomIndex();
-
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword)
+        }
+    }
