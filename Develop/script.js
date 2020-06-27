@@ -5,35 +5,41 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword(); 
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 }
+ // Add event listener to generate button
+ generateBtn.addEventListener("click", writePassword)
 
-// Password length
 
-function passwordParameters() {
-
+// Function to create password
+function generatePassword() {
+// Variables that user can include in password
   var uCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var lCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var characters = ["!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
+  // Array to capture user answers about vars to include
   var passwordArray = [];
   console.log(passwordArray)
-  
+  // Length of password
   var userLength = 0;
 
   var resultArray = [];
 
-  // Confirm length of password
-  var userLength = prompt("Choose the length of your password, between 8 and 128 characters.");
-  if ((userLength < 8) || (userLength > 128)) {
-    alert("Please enter a number between 8 and 128.");
+  // Confirms and prompts for user criteria for password
+  var userLength = confirm("Please choose from the following password criteria.");
+  if (userLength) {
+    passwordLength = prompt("Please choose a password between 8 and 128 characters.");
+    console.log(passwordLength);
+  if ((passwordLength < 8) || (passwordLength > 128)) {
+    prompt("Please enter a number between 8 and 128.");
    }
 
-  else {
-    alert("Your password will be " + userLength + " characters long.");
+   } else {
+    confirm("Your password will be " + passwordLength + " characters long.");
+  return;
   }
-  console.log(userLength);
+ 
   // Use uppercase letters?
   var confirmUcase = confirm("Include uppercase letters?");
   // Use lowercase letters>
@@ -93,9 +99,7 @@ function passwordParameters() {
 
     alert("You have not selected any valid criteria for a password. Hit the refresh button and start over");
 
-    passwordParameters();
-
-  }
+ }
 
   {
     function randomArrayShuffle(array) {
@@ -109,15 +113,15 @@ function passwordParameters() {
       }
       return array;
     }
-    var passwordArray = [uCase ="A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
+    var passwordArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
     randomArrayShuffle(passwordArray);
     console.log(passwordArray);
   }
 
   function getRandomIndex(passwordArray) {
-    return Math.floor(Math.random() * userLength);
+    return Math.floor(Math.random() * passwordLength.length);
   }
-  for (var i = 0; i < userLength; i++) {
+  for (var i = 0; i < passwordLength; i++) {
     var removedItem = passwordArray.splice(getRandomIndex(passwordArray), 1);
     document.writeln(removedItem);
 
@@ -125,6 +129,5 @@ function passwordParameters() {
 
   }
 
-  // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword)
+ 
 }
