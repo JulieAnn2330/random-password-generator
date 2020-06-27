@@ -1,4 +1,4 @@
-   <!-- 1.  Ask user: password length 8-128 - user response -->
+ <!-- 1.  Ask user: password length 8-128 - user response -->
     <!-- Can I do all of these (2-5) with radio buttons or checkboxes? -->
     <!-- 2. Ask user: numbers 0-9 - T/F  -->
     <!-- 3. Ask user: uppercase letters - T/F -->
@@ -7,47 +7,47 @@
     <!-- 6. Generate random password using criteria selected -->
     <!-- 7. New password every time button is hit -->
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-     <div class="wrapper">
-      <header>
-        <!-- top of page text -->
-        <h1>Password Generator</h1>
-      </header>
-      <!-- box that surrounds the password box -->
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+         <div class="wrapper">
+          <header>
+            <!-- top of page text -->
+            <h1>Password Generator</h1>
+          </header>
+          <!-- box that surrounds the password box -->
+          <div class="card">
+            <div class="card-header">
+              <h2>Generate a Password</h2>
+            </div>
+            <div class="card-body">
+              <!-- box that password appears in, aria-label is for screenreaders -->
+              <textarea
+                readonly
+                id="password"
+                placeholder="Your Secure Password"
+                aria-label="Generated Password"
+              ></textarea>
+            </div>
+            
+            <!-- button to generate password -->
+            <div class="card-footer">
+              <button id="generate" class="btn">Generate Password</button>
+              <!-- Copy password to clipboard -->
+              <button onclick="myFunction()" id="copy" class="btn">Copy to Clipboard</button>
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <!-- box that password appears in, aria-label is for screenreaders -->
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        
-        <!-- button to generate password -->
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-          <!-- Copy password to clipboard -->
-          <button onclick="myFunction()" id="copy" class="btn">Copy to Clipboard</button>
-        </div>
-      </div>
-    </div>
- 
-    <script src="script.js">
-
-    </script>
-  </body>
-</html>
+     
+        <script src="script.js">
+    
+        </script>
+      </body>
+    </html>

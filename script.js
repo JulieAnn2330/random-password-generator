@@ -104,13 +104,19 @@ function generatePassword() {
             generatePassword();
         }
 
-        // Create random password
-        function getRandomIndex(passwordArray) {
-            return Math.floor(Math.random() * userLength.length);
-        }
-        for (var i = 0; i < userLength; i++) {
-            password = passwordArray.splice(getRandomIndex(passwordArray), userLength);
-            return password;
-        }
     }
-}
+    var selection = [];
+    // create for loop to create password, ramdom values from resultArray
+    for (var i = 0; i < userLength; i++) {
+      var randomChar = passwordArray[randomizer(0, passwordArray.length)];
+      selection.push(randomChar);
+    }
+    var result = selection.join("");
+    return result;
+  }
+  function randomizer(min, max) {
+    //expectation is r will = num between min and max numbers passed in,
+    //Math.round will convert that to a whole number
+    var r = Math.random() * (max - min) - 1;
+    return Math.round(r); 
+  }
