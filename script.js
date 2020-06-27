@@ -13,7 +13,7 @@ generateBtn.addEventListener("click", writePassword)
 // Function to take in user input.
 function generatePassword() {
     // Variables for user to choose from for password criteria
-    var uCase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+    var uCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     var lCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var nums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     var characters = ["!", "@", "#", "$", "%", "&", "*", "~", "_", "-", "+", "=", "<", ">", "?"];
@@ -106,7 +106,7 @@ function generatePassword() {
 
     }
     var selection = [];
-    // create for loop to create password, ramdom values from resultArray
+    // for loop to create password, based on user input to passwordArray
     for (var i = 0; i < userLength; i++) {
       var randomChar = passwordArray[randomizer(0, passwordArray.length)];
       selection.push(randomChar);
@@ -115,7 +115,7 @@ function generatePassword() {
     return result;
   }
   function randomizer(min, max) {
-    //expectation is r will = num between min and max numbers passed in,
+    //r will equal a number between the minimum and maximum numbers passed in,
     //Math.round will convert that to a whole number
     var r = Math.random() * (max - min) - 1;
     return Math.round(r); 
