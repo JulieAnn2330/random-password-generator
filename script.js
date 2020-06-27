@@ -30,7 +30,6 @@ function passwordParameters() {
         if ((userLength < 8) || (userLength > 128)) {
         prompt("Please enter a number between 8 and 128.");
     }
-
     else {
         confirm("Your password will be " + userLength + " characters long.");
         }
@@ -92,7 +91,7 @@ function passwordParameters() {
     // If no valid criteria is selected
     if (confirmUcase === false && confirmLcase === false && confirmNums === false && confirmCharacters === false) {
 
-        alert("You have not selected any valid criteria for a password. Hit the refresh button and start over");
+        alert("You have not selected any valid criteria for a password, please start over.");
 
         passwordParameters();
 
