@@ -1,4 +1,4 @@
-Deployed program: https://julieann2330.github.io/password-generator/
+Deployed program: https://julieann2330.github.io/random-password-generator/.
 
 # random-password-generator
 Java Script Password Generator
