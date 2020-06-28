@@ -1,6 +1,6 @@
 Deployed program: https://julieann2330.github.io/password-generator/
 
-# password-generator
+# random-password-generator
 Java Script Password Generator
 
 This is a homework assignment that I created for the University of Kansas Coding BootCamp. 
