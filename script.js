@@ -104,19 +104,19 @@ function generatePassword() {
             generatePassword();
         }
 
+        }
+        var selection = [];
+        // for loop to create password, based on user input to passwordArray
+        for (var i = 0; i < userLength; i++) {
+            var randomChar = passwordArray[randomizer(0, passwordArray.length)];
+            selection.push(randomChar);
+        }
+        var result = selection.join("");
+        return result;
+        }
+        function randomizer(min, max) {
+            //r will equal a number between the minimum and maximum numbers passed in
+            //Math.round will convert that to a whole number
+            var r = Math.random() * (max - min) - 1;
+            return Math.round(r);
     }
-    var selection = [];
-    // for loop to create password, based on user input to passwordArray
-    for (var i = 0; i < userLength; i++) {
-      var randomChar = passwordArray[randomizer(0, passwordArray.length)];
-      selection.push(randomChar);
-    }
-    var result = selection.join("");
-    return result;
-  }
-  function randomizer(min, max) {
-    //r will equal a number between the minimum and maximum numbers passed in,
-    //Math.round will convert that to a whole number
-    var r = Math.random() * (max - min) - 1;
-    return Math.round(r); 
-  }
