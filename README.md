@@ -4,7 +4,7 @@ Deployed program: https://julieann2330.github.io/random-password-generator/
 
 Technologies Used: HTML, CSS, JavaScript
 
-![image](https://user-images.githubusercontent.com/64329660/88986592-0ab9cf00-d299-11ea-93ba-9a417dba7711.png)
+![image](https://user-images.githubusercontent.com/64329660/89453991-aa59e000-d725-11ea-9347-f1eea5a2b67f.png)
 
 This is a homework assignment that I created for the University of Kansas Coding BootCamp. 
 
