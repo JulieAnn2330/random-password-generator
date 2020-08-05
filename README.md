@@ -1,6 +1,6 @@
 Random Password-Generator
 
-Deployed program: https://julieann2330.github.io/random-password-generrator/
+Deployed program: https://julieann2330.github.io/random-password-generator/
 
 Technologies Used: HTML, CSS, JavaScript
 
