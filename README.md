@@ -1,7 +1,10 @@
-Deployed program: https://julieann2330.github.io/random-password-generator/.
+Random Password-Generator
 
-# random-password-generator
-Java Script Password Generator
+Deployed program: https://julieann2330.github.io/random-password-generrator/
+
+Technologies Used: HTML, CSS, JavaScript
+
+![image](https://user-images.githubusercontent.com/64329660/88986592-0ab9cf00-d299-11ea-93ba-9a417dba7711.png)
 
 This is a homework assignment that I created for the University of Kansas Coding BootCamp. 
 
@@ -9,7 +12,7 @@ Based on user input including length of password, use of uppercase letters, lowe
 
 I utilized several coding websites for help, including StackOverflow and w3schools.com I also watched YouTube tutorials and got assistance from fellow student Aurora Brune. 
 
-The full details of the project are listed below.
+The full details of the project are listed below:
 
 # 03 JavaScript: Password Generator
 
