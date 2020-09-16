@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Good README Generator</title>
+    
 </head>
 <body>
 <div id = "top">
@@ -75,3 +75,5 @@ Please make sure to update tests as appropriate.</p><br>
     
 </body>
 </html> 
+
+![image](https://user-images.githubusercontent.com/64329660/93394008-1c4f3a00-f839-11ea-8059-5a2c3bff0bd6.png)
