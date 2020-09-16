@@ -27,7 +27,11 @@
 <hr color= "slateblue" noshade>
 
 <h3 id='description'>Description of Project</h3>
-<p>This interactive application assists the user in creating a random password that meets certain criteria (include Uppercase Letters, include Lowercase Letters, include Numbers, include Special Characters) that the userr chooses. Through a series of prompts the user decides what specifications their password should meet and clicking the button generates a random password that meets their criteria. This project was a homework assignment for the University of Kansas Full Stack Bootcamp This project allows a user to have a totally random password that would be hard for someone trying to hack their account to guess. I learned a lot about JavaScript from this project, including the use of prompts.  My project features prompts which porvide an interactive user interface.</p><br>
+<p>This interactive application assists the user in creating a random password that meets certain criteria (include Uppercase Letters, include Lowercase Letters, include Numbers, include Special Characters) that the userr chooses. Through a series of prompts the user decides what specifications their password should meet and clicking the button generates a random password that meets their criteria. This project was a homework assignment for the University of Kansas Full Stack Bootcamp This project allows a user to have a totally random password that would be hard for someone trying to hack their account to guess. I learned a lot about JavaScript from this project, including the use of prompts.  My project features prompts which porvide an interactive user interface. A link to the deployed app can be found here:
+
+<a href="https://github.com/JulieAnn2330/random-password-generator">Random Password Generator</a>
+
+</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
