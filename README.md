@@ -1,64 +1,77 @@
-Random Password-Generator
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Good README Generator</title>
+</head>
+<body>
+<div id = "top">
 
-Deployed program: https://julieann2330.github.io/random-password-generator/
+<h2>Random Password Generator</h2> <a href="#license"><img src= "https://img.shields.io/badge/License-MIT-blue.svg"></a><br>
 
-Technologies Used: HTML, CSS, JavaScript
+<hr color= "slateblue" noshade>
 
-![image](https://user-images.githubusercontent.com/64329660/89453991-aa59e000-d725-11ea-9347-f1eea5a2b67f.png)
+<h2>Table of Contents:</h2>
+<a href="#description" class="contents">1. Description of Project</><br>
+<a href="#technology" class="contents">2. Technologies Used</a><br>
+<a href="#installation" class="contents">3. Installation Directions</a><br>
+<a href="#use" class="contents">4. How to Use the Project</a><br>
+<a href="#contributors" class="contents">5. Contributing</a><br> 
+<a href="#questions" class="contents">6. Questions or Comments</a><br>
+<a href="#license" class="contents">7. License</a><br>
+<a href="#screenshot" class="contents">8. Screenshots of Project</><br>
+<br>
 
-This is a homework assignment that I created for the University of Kansas Coding BootCamp. 
+<hr color= "slateblue" noshade>
 
-Based on user input including length of password, use of uppercase letters, lowercase letters, numbers and special characters, the program will automatically generate a user password that meets their criteria. 
+<h3 id='description'>Description of Project</h3>
+<p>This interactive application assists the user in creating a random password that meets certain criteria (include Uppercase Letters, include Lowercase Letters, include Numbers, include Special Characters) that the userr chooses. Through a series of prompts the user decides what specifications their password should meet and clicking the button generates a random password that meets their criteria. This project was a homework assignment for the University of Kansas Full Stack Bootcamp This project allows a user to have a totally random password that would be hard for someone trying to hack their account to guess. I learned a lot about JavaScript from this project, including the use of prompts.  My project features prompts which porvide an interactive user interface.</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
 
-I utilized several coding websites for help, including StackOverflow and w3schools.com I also watched YouTube tutorials and got assistance from fellow student Aurora Brune. 
+<h3 id='techology'>Technologies Used</h3>
+<p>This project incoporates the following tecnologies:<br>
+HTML,CSS,JavaScript</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
 
-The full details of the project are listed below:
+<h3 id='installation'>Installation</h3>
+<p>No steps are required to submit the project.</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
 
-# 03 JavaScript: Password Generator
+<h3 id='use'>How to Use the Project</h3>
+<p>To use the project, answer the prompts that outline the criteria for the password and click the button. A random password will be generated.</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+<h3 id='contributors'>Contributing to the Project</h3>
+<p>Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+Please make sure to update tests as appropriate.</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
 
-## User Story
+<h3 id='questions'>For Questions or Comments</h3>
+<p>Please contact me at github.com/JulieAnn2330 or julie.schaub@midtownfullstack.com for questions or comments.</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+<h3 id='license'>License</h3>
+<p>This project incorporates the following license: <a href="https://opensource.org/licenses/MIT">MIT</a></p>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
 
-## Acceptance Criteria
+<hr color= "slateblue" noshade>
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
-
-The following image demonstrates the application functionality:
-
-![password generator demo](./Assets/03-javascript-homework-demo.png)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+<h3 id='screenshot'>Screenshots</h3>
+    
+</body>
+</html> 
